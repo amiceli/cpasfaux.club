@@ -14,4 +14,8 @@ $app->get('/', function() use($app) {
     return $app['twig']->render('pages/index.html.twig');
 }); 
 
+$app->get('/jukebox', function() use($app) { 
+    return $app['twig']->render('pages/jukebox.html.twig');
+}); 
+
 $app->run();
