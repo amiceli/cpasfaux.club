@@ -1,20 +1,27 @@
 {
-    "name": "cpasfaux",
-    "version": "0.0.0",
-    "authors": [
-        "amiceli <miceli.antoine@gmail.com>"
+  "name": "cpasfaux",
+  "version": "0.0.0",
+  "authors": [
+    "amiceli <miceli.antoine@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependenciesIgnore": {
+    "jquery": [
+      "**/!(dist)"
     ],
-    "license": "MIT",
-    "private": true,
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependenciesIgnore": {
-        "jquery": ["**/!(dist)"],
-        "bootstrap": ["**/!(dist)"]
-    }
+    "bootstrap": [
+      "**/!(dist)"
+    ]
+  },
+  "dependencies": {
+    "font-awesome": "~4.3.0"
+  }
 }
