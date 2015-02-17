@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>C'est pas fauw</title>
+
+	{# CSS #}
+	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/bootstrap/dist/css/bootstrap-theme.min.css" />
+
+</head>
+<body>
+	
+
+	{% include 'header.html.twig' %}
+
+	<main class="container-fluid">
+		{% block body %} 
+			{# c'est ici qu'on aura le contenu HTML de nos pages #}
+		{% endblock %}
+	</main>
+
+	<script src="{{app.request.basepath}}/public/libs/jquery/dist/jquery.min.js"></script>
+	<script src="{{app.request.basepath}}/public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
