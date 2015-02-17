@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 jukeboxes">
 
-		<div class="view view-first">  
+		<div class="view view-first" data-audio="cpasfaux">  
 		     <img src="{{app.request.basepath}}/public/img/perceval.jpg" />  
 		     <div class="mask">  
 			     <h2>C'est pas faux</h2>  
@@ -18,7 +18,7 @@
 		     </div>  
 		</div>
 
-		<div class="view view-first">  
+		<div class="view view-first" data-audio="legras">  
 		     <img src="{{app.request.basepath}}/public/img/karadoc.jpg" />  
 		     <div class="mask red">  
 			     <h2>Le gras c'est la vie</h2>  
@@ -29,9 +29,28 @@
 		         	<i class="fa fa-play"></i>
 		         </button>
 		     </div>  
+		     <audio src="{{app.request.basepath}}/public/sons/karadoc/legras.mp3"></audio>
+		</div>
+
+		<div class="view view-first" data-audio="legras">  
+		     <img src="{{app.request.basepath}}/public/img/burgonde.jpg" />  
+		     <div class="mask blue">  
+			     <h2>Avé César !</h2>  
+			     <p>
+			     	Par le Roi Burgonde
+			     </p>  
+		         <button>
+		         	<i class="fa fa-play"></i>
+		         </button>
+		     </div>  
+		     <audio src="{{app.request.basepath}}/public/sons/burgonde/avecesar.mp3"></audio>
 		</div>
 
 	</div>
 </div>
 
+{% endblock %}
+
+{% block javascript %}
+	<script src="{{app.request.basepath}}/public/js/jukeboxes.js"></script>
 {% endblock %}
