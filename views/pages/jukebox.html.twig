@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 jukeboxes">
+
+		<div class="view view-first">  
+		     <img src="{{app.request.basepath}}/public/img/perceval.jpg" />  
+		     <div class="mask">  
+			     <h2>C'est pas faux</h2>  
+			     <p>
+			     	Par Perceval De Galle
+			     </p>  
+		         <button>
+		         	<i class="fa fa-play"></i>
+		         </button>
+		     </div>  
+		</div>
+
+		<div class="view view-first">  
+		     <img src="{{app.request.basepath}}/public/img/karadoc.jpg" />  
+		     <div class="mask red">  
+			     <h2>Le gras c'est la vie</h2>  
+			     <p>
+			     	Par Karadoc de Vanne
+			     </p>  
+		         <button>
+		         	<i class="fa fa-play"></i>
+		         </button>
+		     </div>  
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

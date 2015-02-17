@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>C'est pas fauw</title>
+	<title>C'est pas faux</title>
 
 	{# CSS #}
 	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/bootstrap/dist/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="{{app.request.basepath}}/public/css/styles.min.css">
+	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/font-awesome/css/font-awesome.min.css">
 
 </head>
 <body>
-	
 
-	{% include 'header.html.twig' %}
-
+	<header>
+		{% include 'header.html.twig' %}
+		<div>
+			<img src="{{app.request.basepath}}/public/img/kaamelott.jpeg" alt="kaamelott" />
+			<h1>
+				Arthur pas changer assiette pour fromage !
+			</h1>
+		</div>
+	</header>
 	<main class="container-fluid">
 		{% block body %} 
 			{# c'est ici qu'on aura le contenu HTML de nos pages #}
