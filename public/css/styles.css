@@ -1,0 +1,137 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: #eee;
+}
+header nav {
+  margin-bottom: 0 !importantfi;
+}
+header div {
+  text-align: center;
+}
+header div img {
+  width: 100%;
+}
+header div h1 {
+  position: relative;
+  color: white;
+  top: -100px;
+}
+.jukeboxes {
+  margin-bottom: 130px;
+}
+.jukeboxes button {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: transparent;
+  border: rgba(0, 0, 0, 0.8) 1px solid;
+  transition: all 0.2s ease-in;
+}
+.jukeboxes button:hover {
+  width: 55px;
+  height: 55px;
+}
+.jukeboxes .view {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  float: left;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: #ffffff url(../images/bgimg.jpg) no-repeat center center;
+}
+.jukeboxes .view .mask,
+.jukeboxes .view .content {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.jukeboxes .view img {
+  display: block;
+  position: relative;
+}
+.jukeboxes .view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 0 0;
+}
+.jukeboxes .view p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+.jukeboxes .view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000000;
+}
+.jukeboxes .view a.info:hover {
+  box-shadow: 0 0 5px #000000;
+}
+.jukeboxes .view-first img {
+  transition: all 0.2s linear;
+}
+.jukeboxes .view-first .mask {
+  opacity: 0;
+  background-color: rgba(219, 127, 8, 0.7);
+  transition: all 0.4s ease-in-out;
+}
+.jukeboxes .view-first .mask.red {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+.jukeboxes .view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.jukeboxes .view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.jukeboxes .view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.jukeboxes .view-first:hover img {
+  transform: scale(1.1);
+}
+.jukeboxes .view-first:hover .mask {
+  opacity: 1;
+}
+.jukeboxes .view-first:hover h2,
+.jukeboxes .view-first:hover p,
+.jukeboxes .view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.jukeboxes .view-first:hover p {
+  transition-delay: 0.1s;
+}
+.jukeboxes .view-first:hover a.info {
+  transition-delay: 0.2s;
+}
