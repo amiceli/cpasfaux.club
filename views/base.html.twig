@@ -13,23 +13,30 @@
 </head>
 <body>
 
+	{% include 'header.html.twig' %}
+
 	<header>
-		{% include 'header.html.twig' %}
-		<div>
-			<img src="{{app.request.basepath}}/public/img/kaamelott.jpeg" alt="kaamelott" />
-			<h1>
-				Arthur pas changer assiette pour fromage !
-			</h1>
+		<h1>
+			Le gras <b>c'est la vie</b>
+		</h1>
+		<div class="slider">
+			{% for img in images %}'
+				<div style="background-image : url('{{app.request.basepath}}/public/img/slider/{{img.filename}}');">
+					{# <img src="{{app.request.basepath}}/public/img/slider/{{img.filename}}" alt="{{img.alt}}" /> #}
+				</div>
+			{% endfor %}
 		</div>
 	</header>
+
 	<main class="container-fluid">
-		{% block body %} 
+		{% block body %}
 			{# c'est ici qu'on aura le contenu HTML de nos pages #}
 		{% endblock %}
 	</main>
 
 	<script src="{{app.request.basepath}}/public/libs/jquery/dist/jquery.min.js"></script>
 	<script src="{{app.request.basepath}}/public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="{{app.request.basepath}}/public/js/slider.js"></script>
 	{% block javascript %}
 		{# ce block permet à chaque page d'ajout les fichiers javascripts dont elle a besoin #}
 	{% endblock %}
