@@ -10,6 +10,12 @@
 	<link rel="stylesheet" href="{{app.request.basepath}}/public/css/styles.min.css">
 	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/font-awesome/css/font-awesome.min.css">
 
+	{# author #}
+	<meta name="author" content="Sandrine MARTINEZ, Florian FAUCHIER and MICELI Antoine" />
+
+	{% block meta %}
+	{% endblock %}
+
 </head>
 <body>
 
@@ -17,7 +23,7 @@
 
 	<header>
 		<h1>
-			Le gras <b>c'est la vie</b>
+			Le gras <b>c'est la vie</b>""
 		</h1>
 		<div class="slider">
 			{% for img in images %}'
