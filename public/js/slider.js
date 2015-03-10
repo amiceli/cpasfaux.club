@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    /*var interval = null, offset = 1;
+    var interval = null, offset = 1;
 
     interval = setInterval(function() {
         if (offset === 4) {
@@ -13,5 +13,5 @@ $(document).ready(function() {
             }, 500, 'linear');
             offset++;
         }
-    }, 5000);*/
+    }, 5000);
 });
