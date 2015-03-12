@@ -21,14 +21,14 @@
 
 	{% include 'header.html.twig' %}
 
-	{% if slider is not defined %}
+	{% if slider is defined %}
 		<header>
 			<div class="slider">
 				{% for img in images %}'
 					<div>
 						<h1>
 							<span class="fa fa-quote-left"></span> (A Merlin) C'est vrai ce qu'on dit, <br>
-							vous êtes le fils d'un démon et d'une pucelle ? <br>
+							vous êtes le fils d'un démon et d'une pucelle <i class="fa fa-question"></i> <br>
 							[...] Vous avez plus pris de la pucelle.<span class="fa fa-quote-right"></span>
 							<br>
 							<label>
