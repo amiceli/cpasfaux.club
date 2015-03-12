@@ -10,6 +10,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
 $app->before(function () use ($app) {
 
     $files = array_diff(scandir(__DIR__ . '/public/img/slider'), array('.', '..'));
@@ -32,5 +34,9 @@ $app->get('/', function() use($app) {
 $app->get('/jukebox', function() use($app) {
     return $app['twig']->render('pages/jukebox.html.twig');
 });
+
+$app->get('/citations', function() use($app) {
+    return $app['twig']->render('pages/citations.html.twig');
+})->bind('citations');
 
 $app->run();
