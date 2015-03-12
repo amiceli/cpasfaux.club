@@ -21,20 +21,37 @@
 
 	{% include 'header.html.twig' %}
 
-	<header>
-		<h1>
-			Le gras <b>c'est la vie</b>""
-		</h1>
-		<div class="slider">
-			{% for img in images %}'
-				<div style="background-image : url('{{app.request.basepath}}/public/img/slider/{{img.filename}}');">
-					{# <img src="{{app.request.basepath}}/public/img/slider/{{img.filename}}" alt="{{img.alt}}" /> #}
-				</div>
-			{% endfor %}
-		</div>
-	</header>
+	{% if slider is not defined %}
+		<header>
+			<div class="slider">
+				{% for img in images %}'
+					<div>
+						<h1>
+							<span class="fa fa-quote-left"></span> (A Merlin) C'est vrai ce qu'on dit, <br>
+							vous êtes le fils d'un démon et d'une pucelle ? <br>
+							[...] Vous avez plus pris de la pucelle.<span class="fa fa-quote-right"></span>
+							<br>
+							<label>
+							<br>
+								Arthur <br>
+								Livre 1 : "Les défis de merlin"
+							</label>
+						</h1>
+						<img src="{{app.request.basepath}}/public/img/slider/{{img.filename}}" alt="{{img.alt}}" />
+					</div>
+				{% endfor %}
+			</div>
+		</header>
+	{% endif %}
 
 	<main class="container-fluid">
+		<div class="row">
+			<h1 class="col-md-12 amatic mainTitle">
+				{% block title %}
+					Bienvenue sur cpasfaux.club
+				{% endblock %}
+			</h1>
+		</div>
 		{% block body %}
 			{# c'est ici qu'on aura le contenu HTML de nos pages #}
 		{% endblock %}
