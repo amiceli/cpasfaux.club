@@ -6,4 +6,65 @@
 {% endblock %}
 
 {% block body %}
+	<div id="about" class="row">
+		<p>
+			Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+		</p>
+		<hr>
+		<br>
+		<div class="col-md-12">
+			<div class="col-md-3 person">
+				<label class="center">
+					<img src="{{app.request.basepath}}/public/img/about/flo.jpg" alt="Photo mace windu développeur du site web" />
+				</label>
+				<h1>
+					Mace Windu
+				</h1>
+				<p>
+					<span>
+						<b>Caractéristiques : </b> posé, tempère Toni et La Fouine ...
+					</span>
+					<br><br>
+					<label>
+						En charge de collecter les différentes citations et à mettre en place le contenu du site ...
+						<br><br>
+					</label>
+				</p>
+			</div>
+			<div class="col-md-3 person col-md-offset-1">
+				<label class="center">
+					<img src="{{app.request.basepath}}/public/img/about/toni.jpg" alt="Photo Toni développeur du site web" />
+				</label>
+				<h1>
+					Toni
+				</h1>
+				<p>
+					<span>
+						<b>Caractéristiques : </b> taquin, mime souvent La Fouine ...
+					</span>
+					<br><br>
+					<label for="">
+						En charge d'intégrer le site...
+					</label>
+				</p>
+			</div>
+			<div class="col-md-3 person col-md-offset-1">
+				<label class="center">
+					<img src="{{app.request.basepath}}/public/img/about/sandrine.jpg" alt="Photo de la fouine maquetiste du site web" />
+				</label>
+				<h1>
+					la fouine
+				</h1>
+				<p>
+					<span>
+						<b>Caractéristiques : </b> curieuse, à l'affut de discussions ...
+					</span>
+					<br><br>
+					<label for="">
+						En charge de créer le design du site ...
+					</label>
+				</p>
+			</div>
+		</div>
+	</div>
 {% endblock %}
