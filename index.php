@@ -10,7 +10,11 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+$app->register(new Silex\Provider\FormServiceProvider());
+
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+$app->register(new Silex\Provider\TranslationServiceProvider());
 
 $app->before(function () use ($app) {
 
@@ -38,5 +42,39 @@ $app->get('/jukebox', function() use($app) {
 $app->get('/citations', function() use($app) {
     return $app['twig']->render('pages/citations.html.twig');
 })->bind('citations');
+
+$app->get('/apropos', function() use($app) {
+    return $app['twig']->render('pages/about.html.twig');
+})->bind('about');
+
+$app->get('/contact', function(Symfony\Component\HttpFoundation\Request $request) use($app) {
+
+    //  Form create with form provider
+    $form = $app['form.factory']->createBuilder('form')
+        ->add('name')
+        ->add('firstname')
+        ->add('email')
+        ->add('object')
+        ->add('message', 'textarea')
+        ->getForm();
+
+    //  Handle request
+    $form->handleRequest($request);
+
+    //  For POST validation
+    if ($form->isValid()) {
+        //$data = $form->getData();
+
+        // do something with the data
+
+        // redirect somewhere
+        return $app->redirect('...');
+    }
+
+    return $app['twig']->render('pages/contact.html.twig', array(
+        'form' => $form->createView()
+    ));
+
+})->bind('contact');
 
 $app->run();
