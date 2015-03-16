@@ -16,6 +16,20 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app->register(new Silex\Provider\TranslationServiceProvider());
 
+//  Data access layer provider
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+
+        'driver'    => 'pdo_mysql',
+        'host'      => 'localhost',
+        'dbname'    => 'kaamelot',
+        'user'      => 'root',
+        'password'  => 'toni',
+        'charset'   => 'utf8',
+
+    ),
+));
+
 $app->before(function () use ($app) {
 
     $files = array_diff(scandir(__DIR__ . '/public/img/slider'), array('.', '..'));
@@ -31,16 +45,47 @@ $app->before(function () use ($app) {
     $app['twig']->addGlobal('images', $returnedFiled);
 });
 
-$app->get('/', function() use($app) {
+$app->get('/', function() use($app) {  
     return $app['twig']->render('pages/index.html.twig');
-});
+})->bind('home');
 
 $app->get('/jukebox', function() use($app) {
     return $app['twig']->render('pages/jukebox.html.twig');
-});
+})->bind('jukebox');
 
 $app->get('/citations', function() use($app) {
-    return $app['twig']->render('pages/citations.html.twig');
+
+    //  GET citations
+    $allCitations = $app['db']->fetchAll('SELECT ci.content, ci.episode, pe.nom as "personnage", li.nom FROM citation ci, personnage pe, livre li WHERE ci.idLivre = li.id AND ci.idPersonnage = pe.id;');
+    $arr = [];
+
+    foreach ($allCitations as $each) {
+
+        if (!array_key_exists($each['personnage'], $arr)) {
+            $arr[ $each['personnage'] ] = [];
+        }
+
+        $each['nom'] = ucfirst($each['nom']);
+
+        if (!array_key_exists($each['nom'], $arr[ $each['personnage'] ])) {
+            $arr[ $each['personnage'] ][ $each['nom'] ] = [];
+        }
+
+        $idx = $each['personnage'];
+        
+        array_push($arr[ $each['personnage'] ][ $each['nom'] ], array(
+            "content" => $each['content'],
+            "episode" => $each['episode']
+        ));
+    }
+
+    /*echo '<pre>';
+        print_r($arr);
+    echo '<pre>';*/
+
+    return $app['twig']->render('pages/citations.html.twig', array(
+        'citations' => $arr
+    ));
 })->bind('citations');
 
 $app->get('/apropos', function() use($app) {
