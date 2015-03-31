@@ -48,6 +48,8 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.registerTask('prod', ['less', 'cssmin', 'autoprefixer', 'uglify']);
+
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
