@@ -39,7 +39,9 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'public/js/brain.min.js': ['public/js/brain.js']
+                    'public/js/slider.min.js': ['public/js/slider.js'],
+                    'public/js/jukeboxes.min.js': ['public/js/jukeboxes.js'],
+                    'public/js/citations.min.js': ['public/js/citations.js']
                 }
             }
         },
