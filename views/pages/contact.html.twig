@@ -4,6 +4,10 @@
 	Contactez nous
 {% endblock %}
 
+{% block mtitle %}
+    - contact
+{% endblock %}
+
 {% block meta %}
 	{# Mettre les méta data ici #}
 	<meta name="application-name" content="page de contact" />
@@ -15,10 +19,9 @@
 <div id="contact" class="row">
 	<div>
 		<form action="#" method="post">
-    {{ form_widget(form) }}
-
-    <input type="submit" name="submit" />
-</form>
+            {{ form_widget(form) }}
+            <input type="submit" name="submit" />
+        </form>
 	</div>
 </div>
 {% endblock %}

@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>C'est pas faux</title>
+	<title>
+        C'est pas faux
+        {% block mtitle %}{%  endblock %}
+    </title>
 
 	{# CSS #}
 	<link rel="stylesheet" href="{{app.request.basepath}}/public/libs/bootstrap/dist/css/bootstrap.min.css" />
@@ -14,6 +17,7 @@
 	<meta name="author" content="Sandrine MARTINEZ, Florian FAUCHIER and MICELI Antoine" />
 
 	{% block meta %}
+        <meta name="description" content="Site pour amoureux de la série Kaamelott voulant retrouver les meilleurs citations des personnage de la série"/>
 	{% endblock %}
 
 </head>
