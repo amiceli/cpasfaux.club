@@ -22,7 +22,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 
         'driver'    => 'pdo_mysql',
         'host'      => 'localhost',
-        'dbname'    => 'kaamelot',
+        'dbname'    => 'cpasfaux',
         'user'      => 'root',
         'password'  => 'toni',
         'charset'   => 'utf8',
