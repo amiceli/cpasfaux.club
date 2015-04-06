@@ -5,19 +5,26 @@
 {% endblock %}
 
 {% block mtitle %}
-    - contact
+    CPASFAUX : Contacte-nous
 {% endblock %}
 
 {% block meta %}
 	{# Mettre les méta data ici #}
 	<meta name="application-name" content="page de contact" />
-	<meta name="description" content="Si vous voulez nous contacter, vous pouvez utiliser notre formulaire de contact ou nos envoyer un mail à l'adresse contact@capafaux.club" />
+	<meta name="description" content="Formulaire pour entrer en contact avec l'équipe de Cpasfaux.club" />
 {% endblock %}
 
 {% block body %}
 
 <div id="contact" class="row">
+	<p>
+		Si tu souhaites nous contacter pour nous transmettre des suggestions ou idées, n'hésites pas à utiliser ce formulaire de contact.<br>
+		Nous sommes toujours à l'affut de nouvelles citations ou anecdotes de nos chevaliers favoris.
+	</p>
+	<hr>
+	<br>
 	<div>
+		<h2>Pour nous contacter</h2>
 		<form action="#" method="post">
             {{ form_widget(form) }}
             <input type="submit" name="submit" />

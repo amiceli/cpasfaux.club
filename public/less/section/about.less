@@ -2,13 +2,11 @@
 	
 	.person {
 		background : #F8F2E6;
-		border : 6px solid #E4DDCB;
+		border : 10px solid #E4DDCB;
 		min-height: 460px;
-
 		float: left;
 		width: 32%;
-		padding-left: 7px;
-		padding-bottom: 7px;
+		padding: 20px;
 
 
 		&:first-child {
@@ -19,16 +17,17 @@
 		&:last-child {
 			margin-left: 2%;
 		}
-
-		p {
-			&>span {
-				font-style: italic;
-				b {
-					text-transform: uppercase;
-				}
-				color : #477369;
-			}
+		span.infosCara {
+			font-style: italic;				
+			color : #477369;
 		}
+		span.caracteristiques {
+			font-style: none !important;
+			font-weight: bold;
+			text-transform: uppercase;
+			color : #477369;
+		}
+		
 
 		
 		.center {
@@ -37,8 +36,8 @@
 				height: 200px;
 				width: 200px;
 				background: #111;
-				border : 3px white solid;
-				box-shadow: 0 0 4px #222;
+				border : 10px white solid;
+				box-shadow: 3px 3px 5px rgba(29, 24, 15, 0.2);
 				margin-top: 20px;
 				
 			}

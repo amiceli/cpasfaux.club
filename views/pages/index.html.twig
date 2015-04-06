@@ -1,13 +1,24 @@
 {% extends 'base.html.twig' %}
 
+{% block mtitle %}
+	CPASFAUX : Citations de Kaamelott
+{% endblock %}
+
 {% set slider = true %}
 
 {% block body %}
 
 <div class="row">
-	<h1>
-		C'est pas faux
-	</h1>
+	<h2>
+		Bienvenue sur le site "C'est pas faux.club"
+	</h2>
+	<p>
+		Ce site conçu par des fans de Kaamelott, présente les citations phares de la série qui ont pu nous marquer.		
+	</p>
+	<p>
+		Pour en savoir plus sur les créateurs du site rendez-vous sur la page 
+		<a href="{{ path('about') }}" title="A propos">"A propos"</a>
+	</p>
 </div>
 {% endblock %}
 
