@@ -1,10 +1,714 @@
 {
-	"arthur" : {
-		"livre 1" : [
-			["C'est vrai ce qu'on dit", "Episode 5 : le défi de merlin"]
-		],
-		"livre 2" : [
-			["C'est vrai ce qu'on dit", "Episode 5 : le défi de merlin"]
-		]
-	}
+  "Arthur": {
+    "Livre I": [
+      [
+        "(À Merlin) C’est vrai ce qu’on dit, vous êtes le fils d’un démon et d’une pucelle ? […] Vous avez plus pris de la pucelle.",
+        "Episode : Les Défis de Merlin"
+      ],
+      [
+        "Il commence doucement à me faire chier celui là!",
+        "Episode : Codes et Stratégies"
+      ],
+      [
+        "Au bout d'un moment, il est vraiment druide, c'mec-là, ou ça fait quinze ans qu'il me prend pour un con ?",
+        "Episode : L'Imposteur"
+      ],
+      [
+        "Non, moi j'crois qu'il faut qu’vous arrêtiez d'essayer d'dire des trucs. Ça vous fatigue, déjà, et pour les autres, vous vous rendez pas compte de c'que c'est. Moi quand vous faites ça, ça me fout une angoisse... j'pourrais vous tuer, j'crois. De chagrin, hein ! J'vous jure c'est pas bien. Il faut plus que vous parliez avec des gens.",
+        "Episode : Tel un chevalier"
+      ],
+      [
+        "Quand je viens vous voir, pour vous demander des trucs ; c'est l'enchanteur que je viens voir ; pour qu'il m'donne des solutions d'enchanteur : pas des combines à la noix ou des remèdes de bonne femme ! Vous êtes mon enchanteur, vous êtes pas ma grand-mère, OK ?",
+        "Episode : À la volette"
+      ],
+      [
+        "Ça vous fait pas mal à la tête de glandouiller vingt-quatre heures sur vingt-quatre ?",
+        "Episode : Unagi"
+      ],
+      [
+        "J'en ai rien à foutre ! Vous pourriez vous marier avec une chèvre si ça vous chante. Et puis, si y en a une qu'est d'accord, rappelez-vous qu'c'est inespéré puis sautez sur l'occasion.",
+        "Episode : Le tourment"
+      ],
+      [
+        "Merlin, i'sait déjà pas monter des blancs en neige, alors préparer une potion de polymorphie… Permettez-moi d'avoir des doutes.",
+        "Episode : Polymorphe"
+      ],
+      [
+        "De toutes façons, c'est ma mère, j'vais pas la faire tabasser par la garde",
+        "Episode : La Fête de l'Hiver"
+      ],
+      [
+        "J'suis chef de guerre moi, j'suis pas là pour agiter des drapeaux et jouer d'la trompette...",
+        "Episode : Codes et stratégies"
+      ],
+      [
+        "Rangez moi ça, débile, la table ronde, c'est pas la fête de l'artisanat !",
+        "Episode : De retour de Judée"
+      ]
+    ],
+    "Livre II": [
+      [
+        "Décarre tes troupes de chez moi ou j'crame ton pays. C'est assez simple comme vocabulaire ?",
+        "Episode : Le dialogue de Paix"
+      ],
+      [
+        "Vous, vous devriez arrêter de sourire. J'vous promets; ça devient vraiment malsain.",
+        "Episode : Le Portrait"
+      ],
+      [
+        "Le plus intéressant, c'est, comment vous arrivez à faire un truc aussi immonde avec des ingrédients normaux ? [...] Mais c'est incroyable, j'ai l'impression de bouffer de la terre avec de la bouse et du gravier, ça sent le poulailler, mais c'est du cèleri et des oignons, c'est prodigieux.",
+        "Episode : La Fête du Printemps"
+      ],
+      [
+        "Ah le printemps! La nature se réveille, les oiseaux reviennent, on crame des mecs.",
+        "Episode : La Fête du Printemps"
+      ],
+      [
+        "C'est parce que je cherche le Graal que je suis roi. Et du coup que vous êtes reine. Si je cherchais pas le Graal, vous seriez encore en Carmélide en train de torcher le cul des vaches dans une des fermes de votre con de père !",
+        "Episode : Le passage secret"
+      ],
+      [
+        "Le seigneur Perceval ne se met jamais en situation dangereuse. Pour ça, il fait preuve d'une intelligence redoutable.",
+        "Episode : Always"
+      ],
+      [
+        "Mais vous êtes pas mort, espèce de connard ?",
+        "Episode : Always"
+      ],
+      [
+        "Et si je vous dis que vous êtes deux glands, là, vous avez du péremptoire.",
+        "Episode : Unagi II"
+      ],
+      [
+        "Y'a trop de clampins qui se disent poètes qui sortent la licence poétique dès qu'ils pondent trois merdes que personne comprend.",
+        "Episode : Le Poème"
+      ],
+      [
+        "Bohort, je vous donne l'ordre de vous rendre immédiatement en Andalousie pour y rencontrer le chef wisigoth et lui transmettre le message de paix suivant ... Coucou...",
+        "Episode : Neiges Éternelles"
+      ]
+    ],
+    "Livre III": [
+      [
+        "Le Saint-Suaire ? Vous avez foutu en l'air le Saint-Suaire ?",
+        "Episode : Les clous de la sainte croix"
+      ],
+      [
+        "Quand on file une histoire à un copiste, pour qu'il en fasse 3 exemplaires, qu'ça va lui prendre trois mois,et qu'ça va coûter la peau des fesses, c'est pas pour raconter le temps qu'il fait ou ce que vous avez bouffé le midi, hein, il faut qu'ça pète !",
+        "Episode : La poétique - IIème partie"
+      ]
+    ],
+    "Livre IV": [
+      [
+        "J’vais vous en faire préparer un de bon de sortie. Signé, tamponné, tout ce qu’il y a de plus officiel. Et puisque vous aimez les catapultes, on va vous mettre les miches dedans, vous, votre fils, votre femme, et tout l’orchestre. Et paf, feu nourri, direction Carmélide, la Bretagne vue du ciel ! Ça vous apprendra à bouffer à tous les râteliers.",
+        "Episode : Le Traitre"
+      ],
+      [
+        "C’était quand la dernière fois qu’on s’est retrouvés tous d’accord sur un truc !?",
+        "Episode : Au service secret de Sa Majesté"
+      ],
+      [
+        "Je pense que vous glandouillez bien assez comme ça dans la réalité pour qu'on puisse se permettre d'optimiser le fictionnel.",
+        "Episode : La Poétique II"
+      ],
+      [
+        "Non, comme salope en Orcanie, y'a ma sœur, la reine, votre mère quoi, mais vous le saviez ça ?",
+        "Episode : Le Choix de Gauvain"
+      ],
+      [
+        "Pas d'appétit ? J'bouff'rais un ch'val en salade !",
+        "Episode : Tous les matins du monde (Première Partie)"
+      ]
+    ],
+    "Livre V": [
+      [
+        "Faire tourner cette baraque… et guider tous ces débiles jusqu’au Graal, c’est sur moi que c’est tombé. Les dieux ont trouvé une bonne pomme pour s’arracher les cheveux avec cette histoire de dingues, ils sont pas près de la lâcher.",
+        "Episode : L’Épée des rois"
+      ],
+      [
+        "J'suis roi de Bretagne, j'ai pas de conseil à recevoir d'une clodo !",
+        "Episode : La Roche et le Fer"
+      ]
+    ]
+  },
+  "Perceval": {
+    "Livre I": [
+      [
+        "C’est pas faux.",
+        "Episode : La Botte Secrète"
+      ],
+      [
+        "Putain, en plein dans sa mouille !",
+        "Heat"
+      ],
+      [
+        "Faut faire comme avec les scorpions qui se suicident quand ils sont entourés par le feu, faut faire un feu en forme de cercle, autour d’eux, comme ça ils se suicident, pendant que nous on fait le tour et on lance de la caillasse de l’autre côté pour brouiller... Non ?",
+        "Episode : Heat"
+      ],
+      [
+        "Faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !",
+        "Episode : Ambidextrie"
+      ],
+      [
+        "Donc, pour résumer, je suis souvent victime des colibris, sous-entendu des types qu’oublient toujours tout. Euh, non… Bref, tout ça pour dire, que je voudrais bien qu’on me considère en tant que Tel.",
+        "Episode : Tel un chevalier"
+      ],
+      [
+        "C’est pour ça : j’lis jamais rien. C’est un vrai piège à cons c’t’histoire-là. En plus j’sais pas lire.",
+        "Episode : Le Chaudron Rutilant"
+      ],
+      [
+        "Sire, avec tout le respect, est-ce que la reine a les fesses blanches ?",
+        "Episode : Les Fesses de Guenièvre"
+      ],
+      [
+        "Si Joseph d'Arimathie a pas été trop con, vous pouvez être sûr que le Graal, c'est un bocal à anchois.",
+        "Episode : En forme de Graal"
+      ]
+    ],
+    "Livre II": [
+      [
+        "Sire, Sire ! On en a gros !",
+        "Episode : Les Exploités"
+      ],
+      [
+        "Moi, j'serais vous, je vous écouterais... Non, moi, j'serais nous, je vous... Si moi, j'étais vous, je vous écouterais ! Non, elle me fait chier, cette phrase !",
+        "Episode : Les Exploités"
+      ],
+      [
+        "C’est marrant les petits bouts de fromage par terre. C’est ça que vous appelez une fondue ?",
+        "Episode : Seli et les Rongeurs"
+      ],
+      [
+        "J'voudrais pas faire ma raclette, mais la soirée s'annonce pas super.",
+        "Episode : Un Roi à la Taverne II"
+      ],
+      [
+        "Quand même, ils sont onze. J'ai calculé sur les treize dernières années, dans les deux heures qui précèdent le coucher du soleil, vous en êtes à une moyenne de 8,422.",
+        "Episode : Sept cent quarante-quatre"
+      ],
+      [
+        "Après demain, à partir d'aujourd'hui ?",
+        "Episode : Sept cent quarante-quatre"
+      ],
+      [
+        "De toutes façons, les réunions de la Table Ronde c’est deux fois par mois. Donc, si le mec il dit après-demain à partir de dans deux jours, suivant s’il le dit à la fin du mois, ça reporte.",
+        "Episode : Sept cent quarante-quatre"
+      ],
+      [
+        "Là, vous faites sirop de vingt-et-un et vous dites : beau sirop, mi-sirop, siroté, gagne-sirop, sirop-grelot, passe-montagne, sirop au bon goût.",
+        "Episode : Percreval et le Contre-sirop"
+      ],
+      [
+        "Alors là, c'est Ashton, lui c'est Rutz, lui c'est Pierce, l'autre derrière c'est Pierce aussi, j'ai jamais compris pourquoi, et lui euh, j'crois qu'il a pas d'prénom, tout le monde l'appelle Connard...",
+        "Episode : La Garde Royale"
+      ],
+      [
+        "PAYS DE GALLES INDÉPENDANT !",
+        "Episode : L'Ivresse"
+      ],
+      [
+        "Karadoc, c'est le gars brillant. Le frère, à côté, c'est sûr... C'est vraiment un gros con.",
+        "Episode : O'Brother"
+      ]
+    ],
+    "Livre III": [
+      [
+        "Incandescente, c’est : qui peut accaparer des objets sans resurgir sur autrui.",
+        "Episode : Les Suppléants"
+      ],
+      [
+        "Non, vous, vous vous maravez. Quand on a pas de technique, il faut y aller à la zob.",
+        "Episode : Morituri"
+      ],
+      [
+        "Le code c'est \"le code\" ? Ça va, ils se sont pas trop cassés le bonnet, pour l'trouver celui-là !",
+        "Episode : Poltergeist"
+      ],
+      [
+        "Une maquette ?! Vous avez pas dit qu'c'était une catapulte ?",
+        "Episode : L'Etudiant"
+      ],
+      [
+        "Ouh làlà! elle va pas me gonfler longtemps, la rouquine !!!",
+        "Episode : Aux Yeux de Tous II"
+      ],
+      [
+        "Les 3 actes, c'est les bonnes femmes qui sont mi-taupes mi-déesses, et qui ont forcé les mecs de Bethléem à construire les pyramides.",
+        "Episode : La Poétique"
+      ],
+      [
+        "Sloubi 1, sloubi 2, sloubi 3, sloubi 4, sloubi 5 [...] sloubi 324, sloubi 325!...",
+        "Episode : Chante Sloubi"
+      ],
+      [
+        "C'est moi qui remporte le tour. Quand on remporte le tour à Sloubi, on a quatorze solutions possibles : soit on annule le tour ; soit on passe ; soit on change de sens ; soit on recalcule les points ; soit on compte ; soit on divise par six ; soit on jette les bouts de bois de quinze pouces, ça c'est quand on joue avec les bouts de bois ; soit on se couche ; soit on joue sans atouts. Et après y'a les appels : plus un ; plus deux ; attrape oiseaux ; régoudon ; ou chante Sloubi. [...] Comme vous êtes second, vous avez plus que dix-neuf solutions possibles : soit vous passez ; soit vous sciez en deux les cinquante poutrelles de trente pieds, mais ça c'est quand on joue avec les bouts de bois. Sinon c'est les relances : doublette ; jeu carré ; jeu de piste ; jeu gagnant ; jeu moulin ; jeu-jeu ; joue-jeu ; joue-joue ; joue-jié ; joue-ganou ; gagnar ; catakt ; tacat ; cacatac ; cagat-cata et ratacat-mic. Ou : chante Sloubi. Nous, on va faire que chante Sloubi.",
+        "Episode : Chante Sloubi"
+      ],
+      [
+        "Dans le Languedoc, ils m'appellent Provençal. Mais c'est moi qui m'suis gouré en disant mon nom. Sinon, en Bretagne, c'est le Gros Faisan au sud, et au nord, c'est juste Ducon ..",
+        "Episode : Le Sanglier De Cornouailles"
+      ]
+    ],
+    "Livre IV": [
+      [
+        "Au printemps, j’aime bien pisser du haut des remparts au lever du soleil… Y’a une belle vue !",
+        "Episode : Tous les matins du monde II"
+      ],
+      [
+        "Ils ont pas de bol, quand même ! Mettre au point un truc pareil et tomber sur des cerveaux comme nous !",
+        "Episode : Les Pisteurs"
+      ],
+      [
+        "Sur une échelle de 2 à 76, et là je préfère prendre large, de 2 à 71 on ne nous écoute pas, de 72 à 75, on nous écoute toujours pas, et seulement à 76 on nous laisse parler sans nous engueuler.",
+        "Episode : L'Echelle de Perceval"
+      ],
+      [
+        "En plus je connais une technique pour tuer trois hommes en un coup rien qu’avec des feuilles mortes ! Alors là, vous êtes deux, vous avez bien de la chance.",
+        "Episode : Les Chaperons"
+      ],
+      [
+        "Vous vous prenez pour un enseignant ?... Non j' s'entais que c'était le moment d'faire une vanne mais y'a rien qui est sorti.",
+        "Episode : Les Chaperons"
+      ],
+      [
+        "Bon ça suffit maintenant ! Vous voulez qu'j'me foute en rogne comme un enseignant ? ... Qu'est ce que j'ai avec ça moi ?",
+        "Episode : Les Chaperons"
+      ],
+      [
+        "Mais moi, j’m’en fous des honneurs, rien à péter, le Graal aussi, rien à péter. Moi, c’est Arthur qui compte. Moi je suis pas un as de la stratégie ou du tir à l’arc, mais je peux me vanter de savoir ce que c’est que d’aimer quelqu’un.",
+        "Episode : L'Habitué"
+      ],
+      [
+        "Moi, la canne, ça m’aide. Je visualise le caillou dans l’eau, j’ai l’impression de faire partie d’un tout, moi, le caillou, le fil, le lac, le ciel, c’est entier, vous comprenez ? C’est bien fini. C’est pour ça, moi je me dis, c’est dans ces moments-là qu’on peut bien comprendre des trucs. Vous me prenez pour un con, non ?",
+        "Episode : L'Inspiration"
+      ],
+      [
+        "Ah ça y’est, j’viens de comprendre à quoi ça sert la canne. En fait ça sert à rien… Du coup ça nous renvoie à notre propre utilité : l’Homme face à l’Absurde.",
+        "Episode : L'Inspiration"
+      ]
+    ],
+    "Livre V": [
+      [
+        "Elle a compris la vilaine frisée ? On a dans l'projet de fonder un clan autonome pour partir à l'aventure et ramener du pognon pour entretenir vos grosses miches !! Alors le cageot il dit merci et il ferme sa boîte à caca !",
+        "Episode : L'épée des Rois"
+      ],
+      [
+        "Progressif... N'oubliez pas, dans la casse, le plus important, c'est les suites d'épaisseurs ... Bûche de 10, Bûche de 16; Bûche de 32, Bûbûche, Bibuchette, et re-Bûche de 6 !",
+        "Episode : Unagi V"
+      ],
+      [
+        "Votre femme, si j'avais pas la flemme de descendre de là, elle aurait pris mon pied dans son cul depuis un moment. Parce y'a un truc qu'on oublie quand on parle de retirer Excalibur : c'est le respect au Roi Arthur! Et le respect au Roi Arthur je remarque que Madame en avait un peu plus quand elle était dans son PLUMARD !!",
+        "Episode : Les Dauphins"
+      ]
+    ],
+    "Livre VI": [
+      [
+        "Nan mais je l'ai déjà impressionné, moi ! Je lui ai expliqué une nouvelle technique de combat : on se bat à moitié à mains nues, et à moitié avec du calcium. J'peux vous dire il faisait moins le malin !",
+        "Episode : Dux Bellorum"
+      ]
+    ]
+  },
+  "Karadoc": {
+    "Livre I": [
+      [
+        "Mais y a rien à développer ! C'est de la merde, c'est de la merde, c'est tout ! Moi, on me sert ça dans une auberge, le tavernier, il s'prend une quiche dans sa tête !",
+        "Episode : Le Pain"
+      ],
+      [
+        "L'agneau était daubé du cul !",
+        "Episode : La quête des deux renards"
+      ]
+    ],
+    "Livre II": [
+      [
+        "",
+        "Episode : "
+      ],
+      [
+        "Eh oui mémé, t'es bien mouchée !",
+        "Episode : L'absent"
+      ],
+      [
+        "Par exemple, vous prenez aujourd’hui. Vous comptez sept jours. Ça vous emmène dans une semaine. Et bien on sera exactement le même jour qu’aujourd’hui… À une vache près, hein… C’est pas une science exacte.",
+        "Episode : Sept cent quarante-quatre"
+      ],
+      [
+        "Des p'tits croutons tout vieux genre pour les lapins ? Ouais j'savais pas c'que c'était, dans le doute j'les ai bouffés.",
+        "Episode : Sept cent quarante-quatre"
+      ],
+      [
+        "[En parlant de la politique de l'autruche, c'est] Une politique qui court vite, une politique qui fait des gros œufs, c'est tout.",
+        "Episode : La Cassette"
+      ],
+      [
+        "Les chicots, c'est sacré ! Parce que si j'les lave pas maintenant, dans dix ans, c'est tout à la soupe. Et l'mec qui me fera manger de la soupe il est pas né !",
+        "Episode : Immaculé Karadoc"
+      ],
+      [
+        "Ça y est… je vois trouble. C’est le manque de gras, je me dessèche.",
+        "Episode : La Restriction"
+      ],
+      [
+        "Vous nous utilisez bon gré malgré pour arriver sur la fin !",
+        "Episode : Les Exploités"
+      ],
+      [
+        "Le Graal par ci, le Graal par là. Le Graal par ci, le Graal par là. Le Graal par ci, le Graal par là. Le Graal par ci, le Graal par là...",
+        "Episode : Les Exploités"
+      ],
+      [
+        "Mon frère, il peut pas aller à l'école. Quand on lui explique un machin technique, il s'évanouit.",
+        "Episode : O'Brother"
+      ]
+    ],
+    "Livre III": [
+      [
+        "Ecoutez ma mie, il vaut mieux bouffer ça une fois par mois que de la merde tous les jours, je vais vous dire, à ce niveau là, c'est plus de la gastronomie, c'est de l'érotisme.",
+        "Episode : Cuisine et Dépendances"
+      ],
+      [
+        "La joie de vivre et le jambon, y'a pas trente-six recettes du bonheur !",
+        "Episode : Le Législateur"
+      ],
+      [
+        "La neige qui poudroie dans la solitude de notre enfance. Qu'est ce que vous dites de ça ?",
+        "Episode : Le Tourment III"
+      ]
+    ],
+    "Livre IV": [
+      [
+        "Lorsqu'on le tient par la partie sporadique, ou boulière, le fenouil est un objet redondant",
+        "Episode : Unagi IV"
+      ],
+      [
+        "Tout à l’heure, on a vu que le chapelet de saucisses n’était pas un objet redondant. Et pourtant, on a pu lui trouver une utilisation périmétrique en s’en servant comme un fouet.",
+        "Episode : Unagi IV"
+      ],
+      [
+        "Là, y’a les méduses, les insectes. Là, y’a les glandus, les grouillots. Là, y’a les mecs normaux. Là, y’a les chevaliers. Là, y’a les rois et les princes. Et après, bien au-dessus, y’a le Roi Arthur. Vous, vous aurez eu deux bonhommes dans votre vie, eh ben vous pourrez dire que vous avez tapé dans l’exception.",
+        "Episode : Duel 2ème partie"
+      ],
+      [
+        "Allez, faites-vous belle, que j'me pointe avec la came présentable.",
+        "Episode : L’Échange 1re partie"
+      ],
+      [
+        "C'est pas que c'est difficile de la récupérer... C'est que c'est sa mère difficile de la récupérer, la race de sa grand-mère !",
+        "Episode : "
+      ],
+      [
+        "",
+        "Episode : Le vice de forme"
+      ],
+      [
+        "Du passé faisons table en marbre.",
+        "Episode : L’Échelle de Perceval"
+      ]
+    ],
+    "Livre V": [
+      [
+        "Les chiffres, c'est pas une science exacte figurez-vous!",
+        "Episode : Le dernier recours"
+      ],
+      [
+        "On va vous envoyer un mec que en fait on dirait qu'il marche normalement alors qu'il marche alternativement à cloche pied sur chaque pied alors faites gaffe !",
+        "Episode : La Roche Et Le Fer"
+      ]
+    ]
+  },
+  "Léodagant": {
+    "Livre I": [
+      [
+        "C’est dingue, cette histoire ! C’est pas parce que vous faites des tartes pour des petits-enfants qui existent pas que je dois les emmener à la pêche, non ?!",
+        "Episode : Les Tartes aux myrtilles"
+      ],
+      [
+        "Sans vouloir la ramener, la seule différence concrète avec des briques, c'est que vous appelez ça des tartes !",
+        "Episode : Les Tartes aux myrtilles"
+      ],
+      [
+        "Ah bah c'est sûr qu'c'est pas Jo l'Rigolo.",
+        "Episode : Le fléau de Dieu"
+      ],
+      [
+        "Je ne pense pas que deux trous-du-cul soient plus efficaces qu’un seul !",
+        "Episode : Les Nouveaux Frères"
+      ],
+      [
+        "Qu'est-ce que vous voulez, mon p'tit Bohort : entre son épée qui fait de la lumière, son Merlin qui fait pleuvoir des grenouilles et sa Dame du Lac qui se prend pour une truite, il lui manque plus qu'un numéro de trapèze, au roi des Bretons.",
+        "Episode : L’Escorte"
+      ],
+      [
+        "Dites tout de suite que j'ai des idées de tocard !",
+        "Episode : Arthur et les Ténèbres"
+      ],
+      [
+        "C'est vrai que c'est curieux cette manie de pas vouloir torturer ; ça vient de quoi, ça ?",
+        "Episode : Arthur et la Question"
+      ],
+      [
+        "Tenez ! c'est le mot que je cherchais… il gouverne comme une femme !",
+        "Episode : Goustan le Cruel"
+      ],
+      [
+        "C'est quand même formidable ce pays, faut galoper à coté de la route pour pas se casser la gueule.",
+        "Episode : La vraie nature du Graal"
+      ],
+      [
+        "Le minotaure... Le minotaure c'est jamais qu'une grosse vachette montée sur deux pieds, hein! C'est pas ça qui va m'empêcher d'dormir !",
+        "Episode : Le Labyrinthe"
+      ],
+      [
+        "C'est quand même magnifique une armée bien coordonnée, hein...ben quoi, vous allez pas m'dire qu'on a pas l'air con avec nos drapeaux, ça fait une heure qu'on fait des signes y'en a pas un qui va dans le même sens !",
+        "Episode : Codes et Stratégies"
+      ]
+    ],
+    "Livre II": [
+      [
+        "J’ dis déjà pas merci dans ma langue, alors je vais pas l’apprendre en picte.",
+        "Episode : L’Enlèvement de Guenièvre"
+      ],
+      [
+        "Ah nan mais j'vous jure hein, des tanches pareilles, on devrait les mettre sous verre !",
+        "Episode : L’Enlèvement de Guenièvre"
+      ],
+      [
+        "Personnellement, la condition paysanne, j'me la taille en biseau, voyez.",
+        "Episode : La Révolte"
+      ],
+      [
+        "J'ai toujours eu du bol avec l'aléatoire, moi.",
+        "Episode : Le Sort Perdu"
+      ],
+      [
+        "Remarquez… Bohort, éclaireur… rien que pour la curiosité…",
+        "Episode : Le Passage Secret"
+      ],
+      [
+        "QUAND J'PENSE QU'J'AI R'FILE MA FILLE A UN ROMAIN ! J’SUIS À DEUX DOIGTS D'CRÂMER L’CHÂTEAU !!",
+        "Episode : Le Secret d’Arthur"
+      ],
+      [
+        "Avec un pif pareil ils feraient mieux de chercher des truffes plutôt que de nous emmerder !",
+        "Episode : Amen"
+      ],
+      [
+        "Vous savez c'que c'est, mon problème ? Trop gentil.",
+        "Episode : Le complot"
+      ],
+      [
+        "Ben c'est pas pour prendre la défense de la petite mais c'est vrai qu'il tabasse le rouquin aujourd'hui.",
+        "Episode : L'ivresse"
+      ],
+      [
+        "Moi une fois, j'étais tellement bourré que j'avais l'impression de me faire attaquer de tous côtés, j'me défendais, j'me défendais... En fait, j'étais dans un pâturage, j'ai tué 76 chèvres !",
+        "Episode : L'ivresse"
+      ]
+    ],
+    "Livre III": [
+      [
+        "Bon par exemple moi j'adore les fraises, bon bah si j'bouffe 3 bassines de fraises en 1 heure ah bah j'choppe la chiasse hein, j'suis comme tout l'monde hein...",
+        "Episode : Le Magnanime"
+      ],
+      [
+        "Moi, j’ai appris à lire, et ben je souhaite ça à personne !",
+        "Episode : L’Assemblée des rois 2ème partie"
+      ]
+    ],
+    "Livre IV": [
+      [
+        "C'est marrant parce que, d'habitude, dans les tartes, moi, je mange les fruits puis je laisse la pâte. [Arthur : Et là, vous faites l'inverse ?] Hein ? Euh, ah non non, là, je laisse tout là.",
+        "Episode : La tarte aux fraises"
+      ],
+      [
+        "Oh, la fierté… Si j’avais dû être à cheval là-dessus, je vous aurais pas épousée, déjà.",
+        "Episode : L’Art de la table"
+      ],
+      [
+        "Moi j’étais sûr qu’ils reviendraient crevés ; ils sont vivants, un succès. Mieux ! une surprise.",
+        "Episode : La Réaffectation"
+      ],
+      [
+        "Heu... à propos de devenir marteau, vous savez que chez moi ça peut aller assez loin ? Parce que bon, mettons là heu... on s'pose, on analyse le truc. Le crin-crin ça fait des heures que ça dure et en plus, vous vous y mettez à plusieurs. Et ben moi le machin, une fois que j'en ai fait des copeaux, et ben je peux très bien mettre le feu au plumard ! Même au mobilier, ça m'fait pas peur !",
+        "Episode : Le Oud II"
+      ],
+      [
+        "En somme, il faudrait déclarer la guerre à Lancelot pour récupérer la Reine et donner un héritier au trône, en tablant sur l'éventualité que la Reine est enceinte et pas d'une fille? [Dame Séli : En somme] Et c'est moi le paramètre hasardeux ?",
+        "Episode : Les Novices"
+      ]
+    ],
+    "Livre V": [
+      [
+        "Ce qu'il y a de bien avec les opinions tranchées, c'est qu'ça relance le débat. En somme vous êtes une sorte de provocateur, quoi.",
+        "Episode : Perceval de Sinope"
+      ],
+      [
+        "Prenons un symbole connu : le Graal. Tout le monde sait bien que c'est beaucoup plus qu'un vase, hein ? Y'a toute une signification autour. Mais regardez ça par exemple : c'est une couronne. Alors d'un point de vue purement concret, ça veut juste dire que je suis Roi. mais d'un point de vue symbolique c'est beaucoup plus intéressant... Par exemple, cette couronne nous informe symboliquement que tous les mous du slibard qui avaient l'habitude de se les rouler sous l'ancien régime vont devoir se mettre un coup de fouet s'ils veulent pas que je leur mette moi-même. Cette couronne symbolise la fin des haricots et la décarrade des tire-au-flanc, et surtout l'avènement de l'ordre et de la discipline. En d'autres termes, la rigolade, c'est terminé.",
+        "Episode : L'avènement du Sanguinaire"
+      ],
+      [
+        "Et qu'est-ce que vous voulez que j'y fasse à la paperasse, moi ? Vous me prenez pour un serre-livre ?",
+        "Episode : Le royaume sans tête"
+      ],
+      [
+        "Parce qu'au bout d'un moment, il va falloir envisager la possibilité de me lâcher la collerette !",
+        "Episode : Le royaume sans tête"
+      ],
+      [
+        "Non, mais je crois que mes ambitions se résument clairement: la férocité avant tout.",
+        "Episode : Le royaume sans tête"
+      ],
+      [
+        "Vous voulez que j'aille lui mettre une avoine ?",
+        "Episode : Le royaume sans tête"
+      ],
+      [
+        "Dites, vous savez qu'à solliciter trop souvent la patience des gens, on finit par agacer ?",
+        "Episode : Le royaume sans tête"
+      ],
+      [
+        "Alors, si vous êtes plus à l'aise avec les notions concrètes, je peux vous proposer mon pied dans les noix...",
+        "Episode : Le dernier jour"
+      ],
+      [
+        "Ils ont la notion de rien. Même la notion de la menace que représente mon pied au cul ils l'ont pas. C'est désespérant.",
+        "Episode : Le Périple"
+      ]
+    ],
+    "Livre VI": [
+      [
+        "Les coups de génies, j'ai pas besoin qu'on me les souffle.",
+        "Episode : Nuptiae"
+      ],
+      [
+        "Oui vous avez raison, soyez pas trop d’mon côté. On aurait l’air un peu couple à la con à être tout l’temps d’accord !",
+        "Episode : Arturus Rex"
+      ],
+      [
+        "Je veux bien passer sur vos tentatives de putsch, vos combines verreuses... En revanche, si vous ne la fermez pas tout de suite, mais, définitivement, je vous aplatis les boules avec ça.",
+        "Episode : Praeceptores"
+      ],
+      [
+        "Eh les gars, vous savez ce qu'on bouffe ce soir ? DU ROMAIN !",
+        "Episode : Miles Ignotus"
+      ]
+    ]
+  },
+  "Séli": {
+    "Livre I": [
+      [
+        "Il y en a marre de se comporter comme des sagouins avec tout le monde, sous prétexte qu’on a des responsabilités !",
+        "Episode : Les Tartes aux myrtilles"
+      ],
+      [
+        "Votre gendre. Eh ben, il a peur du noir !",
+        "Episode : Arthur et les Ténèbres"
+      ],
+      [
+        "À l'heure qu'il est, dans la chambre de votre fille, il y a un tigre, une bête déchaînée ! Le petit prince est en marche, et qu'est-ce qu'on dit ? Merci mamie !",
+        "Episode : Potion de fécondité"
+      ],
+      [
+        "",
+        "Episode : "
+      ],
+      [
+        "",
+        "Episode : "
+      ]
+    ],
+    "Livre II": [
+      [
+        "Une fois j’ai craché sur les pompes de l’empereur Justinien, alors je vais pas me gratter pour l’un de ses sous-fifres !",
+        "Episode : Le Secret d’Arthur"
+      ],
+      [
+        "Vous vous prenez peut-être pour une statue grecque ?",
+        "Episode : La Chambre"
+      ]
+    ],
+    "Livre III": [
+      [
+        "Quand vous vous l'vez pour bouffer, vous me réveillez, vous bougez, vous allumez les bougies, vous toussez, bref ! Vous ignorez mon existence ! [...] Eh ben là, pas un bruit, pas un mouvement, tout dans le furtif. Vous avez glissé du pageot comme un pet sur une plaque de verglas !",
+        "Episode : La Cassette II"
+      ],
+      [
+        "Ou vous m'expliquez pourquoi vous rasez les murs comme un évadé de cachot, ou vous prenez ma main dans le pif !",
+        "Episode : La Cassette II"
+      ],
+      [
+        "Alors, le ratichon ! On a un p'tit creux ?",
+        "Episode : La restriction II"
+      ],
+      [
+        "Les placards sont fermés ! Vous allez retourner dans votre canfouine, au trot, et si la faim persiste, mangez des moustiques : c'est nourrissant, ça coûte rien, et ça débarrasse !",
+        "Episode : La restriction II"
+      ],
+      [
+        "Des fuites ? Apprenez qu'avec le budget bouffe de Kaamelott, y'a de quoi lever une armée parallèle et envahir la moitié du monde connu.",
+        "Episode : La restriction II"
+      ],
+      [
+        "Je vais vous la faire à la cantonade dans le genre tragédie grecque, tâchez de vous partager ça au mieux : LA BOUFFE EST INTERDITE EN DEHORS DES HEURES DES REPAS !!!",
+        "Episode : La restriction II"
+      ],
+      [
+        "Soit vous fabriquez séance tenante une potion de fécondité qui fonctionne mieux que vos flacons de pisse habituels, soit mon mari ici présent se fera un plaisir d'outrepasser la hiérarchie et de vous mettre une trempe maison !",
+        "Episode : La Potion de Fécondité II"
+      ],
+      [
+        "Bohort il a une femme ! Vous pouvez me la refaire sans trembler des genoux celle-là ?",
+        "Episode : Au bonheur des Dames"
+      ],
+      [
+        "Ben voyons, mon colon !",
+        "Episode : Au bonheur des Dames"
+      ]
+    ],
+    "Livre IV": [
+      [
+        "Oh bah c'est normal ça, moi si j'avais foutu un royaume en l'air et qu'la pérennité d'une civilisation tout entière était remise en question à cause de mes p'tites coucheries, moi non plus j'me sentirais pas bien...",
+        "Episode : L'Art de la Table"
+      ],
+      [
+        "Admirez-nous un peu après trente ans de souplesse… Trente ans d’éducation laxiste !… Entre la fille princesse qui abandonne le trône pour mettre les bouts dans la forêt avec un jean-foutre et le fils chevalier qui sait pas tenir sa cuillère et qui est pas foutu de se lever avant midi, vous verrez qu’à force d’être souples, on va finir par passer définitivement pour des romanos ! Et ils se sont pas levés !",
+        "Episode : Le Grand Départ"
+      ],
+      [
+        "Tout le monde le sait, en Carmélide, que vous êtes une patate. Seulement, ça passe parce que les gens savent que c'est moi qui tire les ficelles dans l'arrière boutique.",
+        "Episode : Tous les matins du monde"
+      ]
+    ],
+    "Livre V": [
+      [
+        "Vous vous étonnerez pas si vous ressentez une vive douleur sur le sommet du crâne. C’est sûrement que vous aurez pris le plat à gigot dans la tronche !",
+        "Episode : Corvus corone"
+      ],
+      [
+        "Je vous préviens, la matinée a eu sa bonne dose de pignoufs, je suis plus que crevée... Alors je préconise un déjeuner dans le calme.",
+        "Episode : Les Fruits d’hiver"
+      ],
+      [
+        "C'est des claques dans le museau qu'elles cherchent, les sœurs Tape-Dur ?",
+        "Episode : L'épée des rois"
+      ],
+      [
+        "C'est qu'elles nous accuseraient de conspiration, les siamoises !",
+        "Episode : Hurlements"
+      ],
+      [
+        "Si les dieux avaient dû être de notre côté, ils nous auraient pas refilé des enfants comme vous.",
+        "Episode : La Roche et le Fer"
+      ],
+      [
+        "Votre petit train-train quotidien de reine de Bretagne. Quand je pense à toutes les pécores qui se couperaient les mains pour avoir le tiers de vos soucis, ma pauvre !",
+        "Episode : Le Dernier Jour"
+      ],
+      [
+        "Nous aussi, on vous aime. A partir du moment où vous gardez vos miches sur le trône et où vous foutez pas l'camp dès qu'un blondinet vous fait d'l'œil.",
+        "Episode : Le Dernier Jour"
+      ]
+    ]
+  }
 }
