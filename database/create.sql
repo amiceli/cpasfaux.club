@@ -21,7 +21,7 @@ CREATE TABLE `personnage` (
 
 CREATE TABLE `citation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(255) NOT NULL,
+  `content` text NOT NULL,
   `episode` varchar(255) NOT NULL,
   `idPersonnage` int(11) NOT NULL,
   `idLivre` int(11) NOT NULL,
