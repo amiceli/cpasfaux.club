@@ -102,7 +102,7 @@ $app->get('/contact', function(Symfony\Component\HttpFoundation\Request $request
         ->add('firstname', 'text', array(
             'label' => 'Prénom'
         ))
-        ->add('email', 'efmail', array(
+        ->add('email', 'email', array(
             'label' => 'Email'
         ))
         ->add('object', 'text', array(
