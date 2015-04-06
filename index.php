@@ -24,7 +24,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'host'      => 'localhost',
         'dbname'    => 'cpasfaux',
         'user'      => 'root',
-        'password'  => 'toni',
+        'password'  => 'alexmercer',
         'charset'   => 'utf8',
 
     ),
