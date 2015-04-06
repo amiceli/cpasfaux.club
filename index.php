@@ -96,11 +96,21 @@ $app->get('/contact', function(Symfony\Component\HttpFoundation\Request $request
 
     //  Form create with form provider
     $form = $app['form.factory']->createBuilder('form')
-        ->add('name')
-        ->add('firstname')
-        ->add('email')
-        ->add('object')
-        ->add('message', 'textarea')
+        ->add('name', 'text', array(
+            "label" => 'Nom'
+        ))
+        ->add('firstname', 'text', array(
+            'label' => 'Prénom'
+        ))
+        ->add('email', 'efmail', array(
+            'label' => 'Email'
+        ))
+        ->add('object', 'text', array(
+            'label' => 'objet'
+        ))
+        ->add('message', 'textarea', array(
+            'label' => 'Message'
+        ))
         ->getForm();
 
     //  Handle request
