@@ -9,71 +9,67 @@
 {% endblock %}
 
 {% block meta %}
-    <meta name="application-name" content="jukebox de la série" />
-    <meta name="description" content="Extraits audio des citations phares de la série Kaamelott" />
+    <meta name="application-name" content="jukebox de la série"/>
+    <meta name="description" content="Extraits audio des citations phares de la série Kaamelott"/>
 {% endblock %}
 
 {% block body %}
 
-	<div id="jukebox" class="row">
-		<p>
-			Dans cette section, tu retrouveras les citations de nos chevaliers favoris de la séries Kaamelott au format audio.<br>
-			C'est encore plus drôle de les écouter.
-		</p>
-		<hr>
-		<br>
+    <div id="citations" class="row">
+        <p>
+            Dans cette section, tu retrouveras les citations de nos chevaliers favoris de la séries Kaamelott au format
+            audio.<br>
+            C'est encore plus drôle de les écouter.
+        </p>
+        <hr>
+        <br>
 
-<div class="row">
-	<div class="col-md-8 col-md-offset-2 jukeboxes">
+        {% for key, citation in jukeboxes %}
+            {# content, episode, personnage, nom #}
 
-		<div class="view view-first" data-audio="cpasfaux">  
-		     <img src="{{app.request.basepath}}/public/img/perceval.jpg" />  
-		     <div class="mask">  
-			     <h2>C'est pas faux</h2>  
-			     <p>
-			     	Par Perceval De Galle
-			     </p>  
-		         <button>
-		         	<i class="fa fa-play"></i>
-		         </button>
-		     </div>  
-		     <audio src="{{app.request.basepath}}/public/sons/karadoc/legras.mp3"></audio>
-		</div>
+            <div class="col-md-12 citation" data-perso="{{ key|first|lower }}">
+                <div class="ico">
+                    <img src="{{ app.request.basepath }}/public/img/citations/{{ key }}.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="header">
+                        <h1>
+                            {{ key }}
+                        </h1>
 
-		<div class="view view-first" data-audio="legras">  
-		     <img src="{{app.request.basepath}}/public/img/karadoc.jpg" />  
-		     <div class="mask red">  
-			     <h2>Le gras c'est la vie</h2>  
-			     <p>
-			     	Par Karadoc de Vanne
-			     </p>  
-		         <button>
-		         	<i class="fa fa-play"></i>
-		         </button>
-		     </div>  
-		     <audio src="{{app.request.basepath}}/public/sons/karadoc/legras.mp3"></audio>
-		</div>
+                        <p>
+                            <b>Personnage : </b>
+                        </p>
+                    </div>
 
-		<div class="view view-fifth" data-audio="legras">  
-		     <img src="{{app.request.basepath}}/public/img/burgonde.jpg" />  
-		     <div class="mask blue">  
-			     <h2>Avé César !</h2>  
-			     <p>
-			     	Par le Roi Burgonde
-			     </p>  
-		         <button>
-		         	<i class="fa fa-play"></i>
-		         </button>
-		     </div>  
-		     <audio src="{{app.request.basepath}}/public/sons/burgonde/avecesar.mp3"></audio>
-		</div>
+                    <div class="accordion">
+                        {% for k, sub in citation %}
+                            <h1>
+                                {{ k }}
+                            </h1>
+                            <div>
+                                {% for episode in sub %}
+                                    <p>
+										<span>
+											{{ episode.content }}
+										</span>
+                                        <br>
+                                        <audio controls
+                                               src="{{ app.request.basepath }}/public/songs/{{ episode.path }}"></audio>
+                                    </p>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
 
-	</div>
-</div>
+                </div>
+            </div>
 
-	</div>
+        {% endfor %}
+
+    </div>
 {% endblock %}
 
 {% block javascript %}
-	<script src="{{app.request.basepath}}/public/js/jukeboxes.min.js"></script>
+    <script src="{{ app.request.basepath }}/public/js/jukeboxes.min.js"></script>
 {% endblock %}

@@ -50,7 +50,39 @@ $app->get('/', function() use($app) {
 })->bind('home');
 
 $app->get('/jukebox', function() use($app) {
-    return $app['twig']->render('pages/jukebox.html.twig');
+
+    $files = scandir(__DIR__ . '/public/songs');
+
+    $jukeboxes = [];
+
+    foreach ($files as $each) {
+        if ($each != '.' && $each != '..') {
+
+            $element = explode('-', $each);
+
+            $perso = trim($element[0]);
+            $livre = trim($element[1]);
+            $content = str_replace('.mp3', '', trim($element[2]));
+
+            if (!array_key_exists($perso, $jukeboxes)) {
+                $jukeboxes[$perso] = [];
+            }
+
+            if (!array_key_exists($livre, $jukeboxes[$perso])) {
+                $jukeboxes[$perso][$livre] = [];
+            }
+
+            array_push($jukeboxes[$perso][$livre], array(
+               'content' => $content,
+                'path' => $each
+            ));
+
+        }
+    }
+
+    return $app['twig']->render('pages/jukebox.html.twig', array(
+        'jukeboxes' => $jukeboxes
+    ));
 })->bind('jukebox');
 
 $app->get('/citations', function() use($app) {
