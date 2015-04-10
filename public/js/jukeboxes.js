@@ -1,13 +1,19 @@
 $(document).ready(function() {
 	
-	$('.jukeboxes .view button').click(function() {
-		$(this).parents('.view').find('audio').trigger('play');
-		$(this).find('i').prop('class', 'fa fa-pause');
+	$('.player').click(function() {
+        if ($(this).find('audio')[0].paused ) {
+            $(this).find('audio')[0].play();
+        } else {
+            $(this).find('audio')[0].pause();
+        }
+    });
 
+    $('.player audio').on('play', function() {
+        $(this).parent().find('.fa').prop('class', 'fa fa-pause');
+    });
 
-		$(this).parents('.view').find('audio').bind('ended', $.proxy(function() {
-			$(this).find('i').prop('class', 'fa fa-play');
-		}, this));
-	});
+    $('.player audio').on('pause', function() {
+        $(this).parent().find('.fa').prop('class', 'fa fa-play');
+    })
 
 });

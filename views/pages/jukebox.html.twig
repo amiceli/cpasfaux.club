@@ -49,14 +49,15 @@
                             </h1>
                             <div>
                                 {% for episode in sub %}
-                                    <p>
-										<span>
-											{{ episode.content }}
-										</span>
-                                        <br>
-                                        <audio controls
-                                               src="{{ app.request.basepath }}/public/songs/{{ episode.path }}"></audio>
-                                    </p>
+                                    <div class="player {{ key }}">
+                                        <audio src="{{ app.request.basepath }}/public/songs/{{ episode.path }}"></audio>
+                                        <div>
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                        <label>
+                                            {{ episode.content }}
+                                        </label>
+                                    </div>
                                 {% endfor %}
                             </div>
                         {% endfor %}
