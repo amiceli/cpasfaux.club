@@ -20,11 +20,17 @@ $app->register(new Silex\Provider\TranslationServiceProvider());
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
 
-        'driver'    => 'pdo_mysql',
+        /*'driver'    => 'pdo_mysql',
         'host'      => 'localhost',
         'dbname'    => 'cpasfaux',
         'user'      => 'root',
         'password'  => 'alexmercer',
+        'charset'   => 'utf8',*/
+        'driver'    => 'pdo_mysql',
+        'host'      => 'localhost',
+        'dbname'    => 'cpasfaux',
+        'user'      => 'root',
+        'password'  => '',
         'charset'   => 'utf8',
 
     ),
@@ -88,27 +94,49 @@ $app->get('/jukebox', function() use($app) {
 $app->get('/citations', function() use($app) {
 
     //  GET citations
-    $allCitations = $app['db']->fetchAll('SELECT ci.content, ci.episode, pe.nom as "personnage", li.nom FROM citation ci, personnage pe, livre li WHERE ci.idLivre = li.id AND ci.idPersonnage = pe.id;');
+    $allCitations = $app['db']->fetchAll('
+        SELECT 
+        ci.content, 
+        ci.episode, 
+        pe.nom as "personnage", 
+        pe.acteur,
+        pe.profil,
+        li.nom 
+        FROM citation ci, 
+        personnage pe, 
+        livre li 
+        WHERE ci.idLivre = li.id 
+        AND ci.idPersonnage = pe.id;
+        ');
     $arr = [];
 
     foreach ($allCitations as $each) {
 
         if (!array_key_exists($each['personnage'], $arr)) {
-            $arr[ $each['personnage'] ] = [];
-        }
+            $arr[ $each['personnage'] ] = [
+                'acteur' => $each['acteur'],
+                'profil' => $each['profil'],
+                'livres' => [],
+            ]; 
+        }    
 
         $each['nom'] = ucfirst($each['nom']);
-
-        if (!array_key_exists($each['nom'], $arr[ $each['personnage'] ])) {
-            $arr[ $each['personnage'] ][ $each['nom'] ] = [];
+        if (!array_key_exists($each['nom'], $arr[$each['personnage']]['livres'])) {
+            $arr[$each['personnage']]['livres'] = [
+                $each['nom'] => [
+                    "content" => $each['content'],
+                    "episode" => $each['episode'], 
+                ],                
+            ]; 
         }
 
-        $idx = $each['personnage'];
+        //$idx = $each['personnage'];
         
-        array_push($arr[ $each['personnage'] ][ $each['nom'] ], array(
-            "content" => $each['content'],
-            "episode" => $each['episode']
-        ));
+        //array_push($arr[ $each['personnage'] ]['livres'], array(
+        //    "content" => $each['content'],
+        //    "episode" => $each['episode']
+        //));
+        //echo'<pre>';print_r($arr);echo'</pre>';//die();
     }
 
     /*echo '<pre>';

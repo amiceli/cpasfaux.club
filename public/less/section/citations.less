@@ -1,11 +1,5 @@
 #citations {
 
-	p {
-		padding: 12px;
-		font-size : 17px;
-		color : brown;
-	}
-
 	hr {
 		border-color : brown;
 	}
@@ -14,7 +8,7 @@
 		float: left;
 		width: 80px;
 		height: 80px;
-		margin: 10px;
+		margin: 0px 15px 15px 0px;
 		line-height: 80px;
 		background : #FDF7EB;
 		color : black;
@@ -30,7 +24,7 @@
 	}
 
 	.citation {
-		margin-bottom: 10px;
+		margin: 15px 0px;
 		display : inline-block;
 		.ico {
 			float: left;
@@ -49,31 +43,48 @@
 			width: calc(~'100% - 120px');
 
 			.header {
+				padding: 7px 15px;
 				border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
 
 			}
 
 			h1 {
 				.amatic;
+				float: left;
 				text-transform : uppercase;
-				font-weight    : 700;
+				font-weight    : bold;
 				font-size      : 30px;
-				color          : #B41A15;
-				margin-top     : 0;
-				margin-bottom  : 0;
-				padding-left: 12px;
-				padding-top: 3px;
+				color          : #af1b17;
+				margin : 0;
+			}
+			h2{
+				float: right;
+				vertical-align: top;
+				font-family: 'Arial';
+				font-weight: bold;
+				font-size: 14px;
+				font-style: italic;
+				color: #49756f;
+				margin: 0;
+				.acteurNom{
+				font-weight: normal;
+				}
+			}
+			.clear{
+				clear: both;
 			}
 
 			p {
-				b {
+				strong {
 					text-transform: uppercase;
 					font-weight: 700;
-					font-family: 'arial';
-					color : black;
+					font-family: 'Arial';
+					color : #1d180f;
 					font-style: italic;
 					font-size : 14px;
 				}
+				font-size: 12px;
+				color: #1d180f;
 			}
 
 			.accordion {
@@ -83,21 +94,12 @@
 					background: #e7e0c3;
 					width: 100%;
 					font-size: 30px;
-					padding-left: 10px;
-					padding-top: 7px;
-					padding-bottom: 7px;
-					&[aria-expanded=false] {
-						&:hover {
-							cursor : pointer;
-						}
-					}
-					&.ui-state-focus {
-						outline : none !important;
-					}
+					padding: 7px 10px;
 					border-top: 1px white solid;
-					&:first-child {
-						border-top: none !important;
-					}
+					
+				}
+				div{
+					padding: 10px 15px;
 				}
 
 				p {

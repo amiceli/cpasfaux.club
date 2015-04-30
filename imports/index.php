@@ -6,7 +6,7 @@
         echo '</pre>';
     }
 	//	------------------------------------------------------------------
-	//	DATABSE CONFIGURATION
+	//	DATABASE CONFIGURATION
 	//	------------------------------------------------------------------
 	$databaseName     = 'cpasfaux';
 	$databaseUser     = 'root';
