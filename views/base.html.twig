@@ -28,23 +28,20 @@
 
 	{% if slider is defined %}
 		<header>
-			<div class="slider">
-				{% for img in images %}'
-					<div>
+			<div class="slider">				
+				<div class="sliderImg">
+					<div class="sliderCitation">
 						<h1>
-							<span class="fa fa-quote-left"></span> (A Merlin) C'est vrai ce qu'on dit, <br>
-							vous êtes le fils d'un démon et d'une pucelle <i class="fa fa-question"></i> <br>
-							[...] Vous avez plus pris de la pucelle.<span class="fa fa-quote-right"></span>
-							<br>
-							<label>
-							<br>
-								Arthur <br>
-								Livre 1 : "Les défis de merlin"
-							</label>
+							<span class="quote">"</span> (A Merlin) C'est vrai ce qu'on dit, <br>
+							vous êtes le fils d'un démon et d'une pucelle <span class="question">?</span> <br>
+							[...] Vous avez plus pris de la pucelle.<span class="quote">"</span>							
 						</h1>
-						<img src="{{app.request.basepath}}/public/img/slider/{{img.filename}}" alt="{{img.alt}}" />
+						<label>
+							Arthur <br>
+							Livre 1 : "Les défis de merlin"
+						</label>
 					</div>
-				{% endfor %}
+				</div>				
 			</div>
 		</header>
 	{% endif %}
@@ -52,9 +49,11 @@
 	<main class="container-fluid">
 		<div class="row">
 			<h1 class="col-md-12 amatic mainTitle">
-				{% block title %}
-					cpasfaux.club : site de citations de kaamelott
-				{% endblock %}
+				<div class="centrerMainTitle">
+					{% block title %}
+						cpasfaux.club : site de citations de kaamelott
+					{% endblock %}
+				</div>
 			</h1>
 		</div>
 		{% block body %}

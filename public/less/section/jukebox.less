@@ -166,12 +166,19 @@
 }
 
 .player {
-    width              : 500px;
-    height             : 300px;
+    position: relative;
+    margin: 15px 15px 0px 0px;
+    width              : 300px;
+    height             : 200px;
     background-size    : 100% 100%;
     background-position: 0 0;
     background-repeat  : none;
     overflow           : hidden;
+    border-color: #fff;
+    border-width: 15px;
+    border-style: solid;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 
     &:hover {
       &>div {
@@ -180,55 +187,57 @@
     }
 
     &>div {
-      margin       : 200px auto 0 auto;
-      width        : 50px;
-      height       : 50px;
-      border-left  : 2px white solid;
-      border-top   : 2px white solid;
-      border-right : 2px white solid;
-      background   : rgba(255, 0, 0, 0.5);
-      border-bottom: none;
+      width        : 35px;
+      height       : 35px;
+      background   : #af1b17;
       visibility   : hidden;
       transition   : visibility 0.2s ease-in;
-      line-height  : 50px;
-      color        : white;
+      line-height  : 33px;
+      color        : #fff;
       text-align   : center;
       font-size    : 20px;
-      &:hover {
-          cursor : pointer;
-      }
+      border-color: #fff;
+      border-width: 0px 2px 2px 0px;
+      border-style: solid;
     }
 
     &.Arthur {
-      background-image: url("../img/slider/arthur.png");
+      background-image: url("../img/jukebox/jukebox_arthur.jpg");
     }
     &.Karadoc {
-      background-image: url("../img/slider/karadoc.png");
+      background-image: url("../img/jukebox/jukebox_karadoc.jpg");
     }
 
     &.Léodagan {
-      background-image: url("../img/slider/leodagan.png");
+      background-image: url("../img/jukebox/jukebox_leodagan.jpg");
     }
 
     &.Perceval {
-      background-image: url("../img/slider/perceval.png");
+      background-image: url("../img/jukebox/jukebox_perceval.jpg");
     }
 
     &.Séli {
-      background-image: url("../img/slider/seli.png");
+      background-image: url("../img/jukebox/jukebox_seli.jpg");
     }
 
     label {
-      height     : 50px;
-
-
-      width      : 100%;
-      background : rgba(255, 0, 0, 0.5);
-      text-align : center;
-      line-height: 50px;
-      color      : white;
-      border-top : 3px white solid;
-      filter: grayscale(0%);
+        position: absolute;
+        bottom: 0px;
+        margin: 0px;
+        padding: 7px 15px;
+        width      : 100%;
+        background : rgba(175, 27, 23, 0.7);
+        filter: saturate(100%);
+        -webkit-filter: saturate(300%);
+        -moz-filter: saturate(300%);
+        -o-filter: saturate(300%);
+        -ms-filter: saturate(300%);
+        font-family: 'Arial';
+        font-size: 12px;
+        text-align : center;
+        color      : #fff;
+        border-top : 2px #fff solid;
+        filter: grayscale(0%);
     }
 
 }

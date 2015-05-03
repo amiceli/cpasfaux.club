@@ -16,25 +16,27 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app->register(new Silex\Provider\TranslationServiceProvider());
 
+//vérification du serveur
+$serveur = $_SERVER['HTTP_HOST'];
+$prod = [
+    'driver'    => 'pdo_mysql',
+    'host'      => 'localhost',
+    'dbname'    => 'cpasfaux',
+    'user'      => 'root',
+    'password'  => 'alexmercer',
+    'charset'   => 'utf8',
+];
+$localhost = [
+    'driver'    => 'pdo_mysql',
+    'host'      => 'localhost',
+    'dbname'    => 'cpasfaux',
+    'user'      => 'root',
+    'password'  => '',
+    'charset'   => 'utf8',
+];
+$dbOption = ($serveur != 'localhost') ? ['db.options' => $prod,] : ['db.options' => $localhost,];
 //  Data access layer provider
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-
-        /*'driver'    => 'pdo_mysql',
-        'host'      => 'localhost',
-        'dbname'    => 'cpasfaux',
-        'user'      => 'root',
-        'password'  => 'alexmercer',
-        'charset'   => 'utf8',*/
-        'driver'    => 'pdo_mysql',
-        'host'      => 'localhost',
-        'dbname'    => 'cpasfaux',
-        'user'      => 'root',
-        'password'  => '',
-        'charset'   => 'utf8',
-
-    ),
-));
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $dbOption);
 
 $app->before(function () use ($app) {
 
@@ -58,7 +60,6 @@ $app->get('/', function() use($app) {
 $app->get('/jukebox', function() use($app) {
 
     $files = scandir(__DIR__ . '/public/songs');
-
     $jukeboxes = [];
 
     foreach ($files as $each) {
@@ -66,23 +67,41 @@ $app->get('/jukebox', function() use($app) {
 
             $element = explode('-', $each);
 
-            $perso = trim($element[0]);
+            $perso = utf8_encode(trim($element[0]));
             $livre = trim($element[1]);
-            $content = str_replace('.mp3', '', trim($element[2]));
+            $content = utf8_encode(str_replace('.mp3', '', trim($element[2])));
 
+            //on récupère les informations sur le personnage
+            $queryPersosJukebox = '
+                SELECT 
+                nom, 
+                acteur,
+                profil 
+                FROM personnage
+                WHERE nom = "'.$perso.'"
+                ORDER BY nom ASC;
+            ';
+            $resultPersosJukebox = $app['db']->query($queryPersosJukebox);
+            $allPersosJukebox = $resultPersosJukebox->fetchAll(PDO::FETCH_CLASS);
+
+            //on crée un tableau récupérant les audios correspondant à un personnage
+            //avec ses informations
             if (!array_key_exists($perso, $jukeboxes)) {
-                $jukeboxes[$perso] = [];
+                $jukeboxes[$perso] = [
+                    'acteur' => $allPersosJukebox[0]->acteur,
+                    'profil' => $allPersosJukebox[0]->profil,
+                    'livres' => [],
+                ];
             }
 
             if (!array_key_exists($livre, $jukeboxes[$perso])) {
-                $jukeboxes[$perso][$livre] = [];
+                $jukeboxes[$perso]['livres'][$livre] = [];
             }
 
-            array_push($jukeboxes[$perso][$livre], array(
-               'content' => $content,
-                'path' => $each
-            ));
-
+            $jukeboxes[$perso]['livres'][$livre][] = [
+                'content' => $content,
+                'path' => utf8_encode($each),
+            ]; 
         }
     }
 
@@ -94,57 +113,43 @@ $app->get('/jukebox', function() use($app) {
 $app->get('/citations', function() use($app) {
 
     //  GET citations
-    $allCitations = $app['db']->fetchAll('
+    $queryAllCitations = '
         SELECT 
         ci.content, 
         ci.episode, 
-        pe.nom as "personnage", 
+        pe.nom AS "personnage", 
         pe.acteur,
         pe.profil,
-        li.nom 
+        li.nom AS "livre" 
         FROM citation ci, 
         personnage pe, 
         livre li 
         WHERE ci.idLivre = li.id 
-        AND ci.idPersonnage = pe.id;
-        ');
-    $arr = [];
-
-    foreach ($allCitations as $each) {
-
-        if (!array_key_exists($each['personnage'], $arr)) {
-            $arr[ $each['personnage'] ] = [
-                'acteur' => $each['acteur'],
-                'profil' => $each['profil'],
+        AND ci.idPersonnage = pe.id
+        ORDER BY pe.nom ASC;
+    ';
+    $resultAllCitations = $app['db']->query($queryAllCitations);
+    $allCitations = $resultAllCitations->fetchAll(PDO::FETCH_CLASS);
+    $personnages = []; 
+    foreach ($allCitations as $each) {        
+        if(!array_key_exists($each->personnage, $personnages)){
+            $personnages[$each->personnage] = [
+                'acteur' => $each->acteur,
+                'profil' => $each->profil,
                 'livres' => [],
-            ]; 
-        }    
-
-        $each['nom'] = ucfirst($each['nom']);
-        if (!array_key_exists($each['nom'], $arr[$each['personnage']]['livres'])) {
-            $arr[$each['personnage']]['livres'] = [
-                $each['nom'] => [
-                    "content" => $each['content'],
-                    "episode" => $each['episode'], 
-                ],                
-            ]; 
+            ];            
         }
-
-        //$idx = $each['personnage'];
-        
-        //array_push($arr[ $each['personnage'] ]['livres'], array(
-        //    "content" => $each['content'],
-        //    "episode" => $each['episode']
-        //));
-        //echo'<pre>';print_r($arr);echo'</pre>';//die();
+        if(!array_key_exists($each->livre, $personnages[$each->personnage]['livres'])){
+            $personnages[$each->personnage]['livres'][$each->livre] = [
+                'cite' => [],
+            ];
+        }    
+        $personnages[$each->personnage]['livres'][$each->livre]['cite'][] = 
+        '"<span class="sansBold">'.$each->content.'</span>"<br>'.$each->episode.'<br>';      
     }
 
-    /*echo '<pre>';
-        print_r($arr);
-    echo '<pre>';*/
-
     return $app['twig']->render('pages/citations.html.twig', array(
-        'citations' => $arr
+        'citations' => $personnages
     ));
 })->bind('citations');
 

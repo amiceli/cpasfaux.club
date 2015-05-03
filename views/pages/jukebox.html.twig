@@ -16,58 +16,69 @@
 {% block body %}
 
     <div id="citations" class="row">
-        <p>
-            Dans cette section, tu retrouveras les citations de nos chevaliers favoris de la séries Kaamelott au format
-            audio.<br>
-            C'est encore plus drôle de les écouter.
-        </p>
+        <div class="centrerContent">
+            <p>
+                Dans cette section, tu retrouveras les citations de nos chevaliers favoris de la séries Kaamelott au format
+                audio.<br>
+                C'est encore plus drôle de les écouter.
+            </p>
+        </div>
         <hr>
-        <br>
+        <div class="centrerContent">
+            <br>
 
-        {% for key, citation in jukeboxes %}
-            {# content, episode, personnage, nom #}
-
-            <div class="col-md-12 citation" data-perso="{{ key|first|lower }}">
-                <div class="ico">
-                    <img src="{{ app.request.basepath }}/public/img/citations/{{ key }}.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="header">
-                        <h1>
-                            {{ key }}
-                        </h1>
-
-                        <p>
-                            <b>Personnage : </b>
-                        </p>
-                    </div>
-
-                    <div class="accordion">
-                        {% for k, sub in citation %}
-                            <h1>
-                                {{ k }}
-                            </h1>
-                            <div>
-                                {% for episode in sub %}
-                                    <div class="player {{ key }}">
-                                        <audio src="{{ app.request.basepath }}/public/songs/{{ episode.path }}"></audio>
-                                        <div>
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <label>
-                                            {{ episode.content }}
-                                        </label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endfor %}
-                    </div>
-
-                </div>
+            <div class="col-md-12 Abcdaire">
+                {% for each in range('a', 'z') %}
+                    <div class="letters"> {{ each }} </div>
+                {% endfor %}
             </div>
+            
+            {% for key, citation in jukeboxes %}
+                {# content, episode, personnage, nom #}
 
-        {% endfor %}
+                <div class="col-md-12 citation" data-perso="{{ key|first|lower }}">
+                    <div class="ico">
+                        <img src="{{ app.request.basepath }}/public/img/citations/{{ key }}.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            <h1>
+                                {{ key }}
+                            </h1>
+                            <h2>Acteur : <span class="acteurNom">{{ citation['acteur'] }}</span></h2>
+                            <div class="clear"></div>
+                            <p>
+                                <strong>Personnage : </strong>{{citation['profil']}}
+                            </p>
+                        </div>
 
+                        <div class="accordion">
+                            {% for k, sub in citation['livres'] %}
+                                <h1>
+                                    {{ k }}
+                                </h1>
+                                
+                                <div class="divCitations">
+                                    {% for episode in sub %}
+                                        <div class="player {{ key }}">
+                                            <audio src="{{ app.request.basepath }}/public/songs/{{ episode.path }}"></audio>
+                                            <div>
+                                                <i class="fa fa-play"></i>
+                                            </div>
+                                            <label>
+                                                {{ episode.content }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 

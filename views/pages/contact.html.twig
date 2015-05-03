@@ -17,18 +17,22 @@
 {% block body %}
 
 <div id="contact" class="row">
-	<p>
-		Si tu souhaites nous contacter pour nous transmettre des suggestions ou idées, n'hésites pas à utiliser ce formulaire de contact.<br>
-		Nous sommes toujours à l'affut de nouvelles citations ou anecdotes de nos chevaliers favoris.
-	</p>
+	<div class="centrerContent">
+		<p>
+			Si tu souhaites nous contacter pour nous transmettre des suggestions ou idées, n'hésites pas à utiliser ce formulaire de contact.<br>
+			Nous sommes toujours à l'affut de nouvelles citations ou anecdotes de nos chevaliers favoris.
+		</p>
+	</div>
 	<hr>
-	<br>
-	<div>
-		<h2>Pour nous contacter</h2>
-		<form action="#" method="post">
-            {{ form_widget(form) }}
-            <input type="submit" name="submit" />
-        </form>
+	<div class="centrerContent">		
+		<br>
+		<div>
+			<h2>Pour nous contacter</h2>
+			<form action="#" method="post">
+	            {{ form_widget(form) }}
+	            <input type="submit" name="submit" />
+	        </form>
+		</div>
 	</div>
 </div>
 {% endblock %}
