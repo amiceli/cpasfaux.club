@@ -23,7 +23,7 @@ $prod = [
     'host'      => 'localhost',
     'dbname'    => 'cpasfaux',
     'user'      => 'root',
-    'password'  => 'alexmercer',
+    'password'  => 'toni',
     'charset'   => 'utf8',
 ];
 $localhost = [
@@ -31,7 +31,7 @@ $localhost = [
     'host'      => 'localhost',
     'dbname'    => 'cpasfaux',
     'user'      => 'root',
-    'password'  => '',
+    'password'  => 'toni',
     'charset'   => 'utf8',
 ];
 $dbOption = ($serveur != 'localhost') ? ['db.options' => $prod,] : ['db.options' => $localhost,];
@@ -71,6 +71,8 @@ $app->get('/jukebox', function() use($app) {
             $livre = trim($element[1]);
             $content = utf8_encode(str_replace('.mp3', '', trim($element[2])));
 
+            $perso = utf8_decode($perso);
+
             //on récupère les informations sur le personnage
             $queryPersosJukebox = '
                 SELECT 
@@ -83,6 +85,7 @@ $app->get('/jukebox', function() use($app) {
             ';
             $resultPersosJukebox = $app['db']->query($queryPersosJukebox);
             $allPersosJukebox = $resultPersosJukebox->fetchAll(PDO::FETCH_CLASS);
+
 
             //on crée un tableau récupérant les audios correspondant à un personnage
             //avec ses informations
