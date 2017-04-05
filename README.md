@@ -1,12 +1,14 @@
-# C'est pas faux
+# cpasfaux.club
 
-Ah c'est cotelette que vous comprenez pas ?
+cpasfaux.club est un projet réalisé avec Sandrine Martinez et Florian Fauchier
+dans le cadre de formation.
 
-METEOOOOOOOOOOOOOO
+Nous n'avons pas eu le temps de faire évoluer le projet du coup 
+nous souhaitons le passer en open source.
 
-Arthur pas changer assiette pour fromage
+Le domains cpasfaux.club ou était hébergé le site sera disponible fin avril.
 
-# Installation
+## Installation
 
 Suivre les étapes suivantes une fois que le repo a été cloné.
 
