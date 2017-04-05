@@ -1,7 +1,7 @@
 # cpasfaux.club
 
 cpasfaux.club est un projet réalisé avec Sandrine Martinez et Florian Fauchier
-dans le cadre de formation.
+dans le cadre de notre formation.
 
 Nous n'avons pas eu le temps de faire évoluer le projet du coup 
 nous souhaitons le passer en open source.
